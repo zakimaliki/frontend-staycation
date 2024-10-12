@@ -8,7 +8,7 @@ import treasures from "assets/images/icon-treasure.svg";
 import cities from "assets/images/icon-cities.svg";
 
 import Button from "elements/Button";
-// import formatNumber from "utils/formatNumber";
+import formatNumber from "utils/formatNumber";
 
 const Hero = (props) => {
     function showMostPicked() {
@@ -48,11 +48,11 @@ const Hero = (props) => {
                                     width="36"
                                     height="36"
                                     src={travelers}
-                                    alt={`${props.data.hero.travelers} Travelers`}
+                                    alt={`${props.data.travelers} Travelers`}
                                     />
                                 <h6 className="mt-3">
-                                {props.data.hero.travelers}
-                                    <span className="text-gray-500 font-weight-light ml-1">
+                                {formatNumber(props.data.travelers)}{" "}
+                                    <span className="text-gray-500 font-weight-light">
                                         travelers
                                     </span>
                                 </h6>
@@ -62,11 +62,11 @@ const Hero = (props) => {
                                     width="36"
                                     height="36"
                                     src={treasures}
-                                    alt={`${props.data.hero.treasures} Treasures`}
+                                    alt={`${props.data.treasures} Treasures`}
                                     />
                                 <h6 className="mt-3">
-                                {props.data.hero.treasures}
-                                    <span className="text-gray-500 font-weight-light ml-1">
+                                {formatNumber(props.data.treasures)}{" "}
+                                    <span className="text-gray-500 font-weight-light">
                                         treasures
                                     </span>
                                 </h6>
@@ -76,11 +76,11 @@ const Hero = (props) => {
                                     width="36"
                                     height="36"
                                     src={cities}
-                                    alt={`${props.data.hero.cities} Cities`}
+                                    alt={`${props.data.cities} Cities`}
                                     />
                                 <h6 className="mt-3">
-                                {props.data.hero.cities}
-                                    <span className="text-gray-500 font-weight-light ml-1">
+                                {formatNumber(props.data.cities)}{" "}
+                                    <span className="text-gray-500 font-weight-light">
                                         cities
                                     </span>
                                 </h6>

@@ -4,6 +4,7 @@ import Hero from 'parts/Hero'
 
 import { useLocation } from 'react-router-dom' 
 import landingPage from '../json/landingPage.json'
+import MostPicked from 'parts/MostPicker'
 
 const LandingPage = () => {
   const location = useLocation();
@@ -11,7 +12,8 @@ const LandingPage = () => {
   return(
     <>
       <Header location={location}></Header>
-      <Hero location={location} data={landingPage}></Hero>
+      <Hero location={location} data={landingPage.hero}></Hero>
+      <MostPicked location={location} data={landingPage.mostPicked}></MostPicked>
     </>
   )
 }
